@@ -1,10 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const transactionRouter = require('./routes/transactions');
+
+require('dotenv').config();;
 const DB_PATH = process.env.MONGODB_URL;
 const app = express();
-require('dotenv').config();
+
 const PORT = process.env.PORT || 5000;
 const {readdirSync} = require('fs');
 
